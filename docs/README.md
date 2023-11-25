@@ -13,5 +13,5 @@ pip install -r requirements.txt
 
 # SECRET_KEYを生成
 # これを実行するとconfig/local.pyにSECRET_KEY変数が作成される
-python env.py # envは environment 開発環境の略
+python env.py # envは environmentの略
 ```
