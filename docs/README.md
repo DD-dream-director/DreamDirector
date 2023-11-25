@@ -5,6 +5,7 @@
 - account : アカウント管理機能
 - app_openai : まだ未定だけど、openaiをdjangoに組み込むときに使うフォルダ
 - general : トップページとか、こまごました機能を入れる
+- templates : htmlファイルの格納場所
 
 # セットアップ
 ```bash
