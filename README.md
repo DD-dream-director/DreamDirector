@@ -5,3 +5,13 @@
 - account : アカウント管理機能
 - app_openai : まだ未定だけど、openaiをdjangoに組み込むときに使うフォルダ
 - general : トップページとか、こまごました機能を入れる
+
+# セットアップ
+```bash
+# 必要なpythonモジュールをインストール
+pip install -r requirements.txt 
+
+# SECRET_KEYを生成
+# これを実行するとconfig/local.pyにSECRET_KEY変数が作成される
+python env.py # envは environment 開発環境の略
+```
