@@ -8,6 +8,8 @@
 
 # セットアップ
 ```bash
+
+
 # 必要なpythonモジュールをインストール
 pip install -r requirements.txt 
 
