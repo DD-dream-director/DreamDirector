@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AppOpenaiConfig(AppConfig):
+class GeneralAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'app_openai'
+    name = 'general_app'
