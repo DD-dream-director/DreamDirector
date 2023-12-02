@@ -22,7 +22,8 @@
         </div>
     {% elif content.content_type == "local_file"%}
         <div>
-            <video controls preload = "auto" playsinline src = {{path}}
+            <video controls preload = "auto" playsinline src = {%%}></video>
+        </div>
     {% endif %}
     {% endfor  %}
     </div>

@@ -22,17 +22,28 @@ class VideoContent(models.Model):
     content_type = models.CharField(
         max_length=100)  # 'youtube' or 'local_file'
 
-    video_path = models.CharField(
+    # youtube url
+    url_path = models.URLField(
         max_length=1000, null=True
-    )  # 'youtube' or 'local_file'
+    )
+
+    # local video
+    video = models.FileField(
+        null=True
+    )
 
 
 class VideoTag(models.Model):
     '''
     '''
     name = models.CharField(max_length=200, default="")
-    user = models.ForeignKey(User,on_delete=models.PROTECT)
 
+
+class UserRefTag(models.Model):
+    '''
+    '''
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    tag = models.ForeignKey(VideoTag, on_delete=models.PROTECT)
 
 
 class VideoTagList(models.Model):
