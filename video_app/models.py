@@ -10,7 +10,7 @@ class VideoContent(models.Model):
     original_name = models.CharField(max_length=200)  # 管理ID
     filename = models.CharField(max_length=200, default="")  # ファイル名
     thumb_frame = models.IntegerField(default=0)  # いいねボタン
-    file_type = models.CharField(max_length=100)  # 'youtube' or 'local_file'
+    content_type = models.CharField(max_length=100)  # 'youtube' or 'local_file'
 
 
 class VideoTagName(models.Model):
