@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account_app',
-    'video_app',
     'diagnosis_app',
+    'video_app',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +124,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Media directory
+MEDIA_ROOT = '/storage/'
+MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'

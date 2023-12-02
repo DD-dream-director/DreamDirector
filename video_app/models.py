@@ -1,12 +1,20 @@
 from django.db import models
-from django.contrib.auth import get_user_model
 
 # Create your models here.
 
-User = get_user_model()
+
+class Tag(models.Model):
+    '''
+    タグを管理するモデル
+    '''
+    name = models.CharField(max_length=200, default="")
 
 
-class VideoContent(models.Model):
+class Video(models.Model):
+    '''
+    動画ファイルや動画URL等、動画に関する情報を管理するモデル
+    詳細はこのクラスによって作られるカラムを見ること
+    '''
     title = models.CharField(max_length=200)  # タイトル
 
     description = models.TextField()  # 説明
@@ -17,36 +25,16 @@ class VideoContent(models.Model):
 
     filename = models.CharField(max_length=200, default="")  # ファイル名
 
-    thumb_frame = models.IntegerField(default=0)  # いいねボタン
+    # 動画がURLなのか、uploadされたものなのかを判定するフラグを果たす
+    # TrueならURL,Falseならuploadされた動画ファイル
+    is_url_link = models.BooleanField()
 
-    content_type = models.CharField(
-        max_length=100)  # 'youtube' or 'local_file'
+    # url URLの長さは1000文字に制限している, NULLを許す
+    url = models.URLField(max_length=1000, null=True)
 
-    # youtube url
-    url_path = models.URLField(
-        max_length=1000, null=True
-    )
+    # videoのファイル,NULLを許す,settings.pyのMEDIA_ROOTをきちんと設定すること
+    # 次のプルリクエストでupload_to属性をつけうること -> `kuro_dev:48063cf674d9d1c3e9e9d17fea96749e09dd7f61`より
+    video = models.FileField(null=True)
 
-    # local video
-    video = models.FileField(
-        null=True
-    )
-
-
-class VideoTag(models.Model):
-    '''
-    '''
-    name = models.CharField(max_length=200, default="")
-
-
-class UserRefTag(models.Model):
-    '''
-    '''
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
-    tag = models.ForeignKey(VideoTag, on_delete=models.PROTECT)
-
-
-class VideoTagList(models.Model):
-    content = models.ForeignKey(VideoContent, on_delete=models.CASCADE)
-    # これはいらないかもしれない.
-    tag = models.ForeignKey(VideoTag, on_delete=models.CASCADE)
+    # タグを管理するカラム
+    tags = models.ManyToManyField(Tag, verbose_name="タグ")
