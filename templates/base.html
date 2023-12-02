@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+
+    {% endblock %}
+    {% block extraMetaInfo %}
+
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <!-- トップページなどが使えるようになったらコメントを外すこと -->
+      <a href="{% url 'recommend_videos' %}" name="return_home">トップページ</a>
+      <a href="{% url 'post_video' %}">投稿</a>
+      {% block extraheader %}
+
+      {% endblock %}
+    </header>
+    <main>
+      {% block main %}
+
+      {% endblock %}
+    </main>
+    <footer>
+      {% block extrafooter %}
+
+      {% endblock %}
+    </footer>
+  </body>
+  {% block extraScript %}
+
+  {% endblock %}
+</html>
