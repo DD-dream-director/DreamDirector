@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class DiagnosisAppConfig(AppConfig):
+class VideoAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'diagnosis_app'
+    name = 'video_app'
