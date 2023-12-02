@@ -4,8 +4,8 @@ from django.urls import path
 from views import *
 
 urlpatterns = [
-    path('video_app/diagnosis.html'),
-    path('video_app/recomment_videos.html'),
-    path('video_app/other_videos.html'),
-    path('video_app/other_video.html'),
+    path('diagnosis/',diagnosisView,name="diagnosis"), # タグがいっぱいあるやつ
+    path('recommend_videos/',recommend_videosView,name="recommend_videos"), # おすすめ動画を表示するルーティング
+    path('other_videos/',other_videosView,name="other_videos"), # おすすめ以外の動画を表示するルーティング
+    path('other_video/',other_videoView,name="other_video"), # 
 ]
