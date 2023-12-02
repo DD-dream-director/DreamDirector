@@ -6,14 +6,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block title %}
-
+      <!-- titleタグを入れるblock -->
     {% endblock %}
-    {% block extrametaInfo %}
-
+    {% block extraMetaInfo %}
+      <!-- 追加のlinkタグなどを入れるblock -->
     {% endblock %}
   </head>
   <body>
     <header>
+      {% comment %} <a href="{% url 'top' %}" name="return_home">トップページ</a> {% endcomment %}
+      {% comment %} <a href="{% url 'post' %}">投稿</a> {% endcomment %}
       {% block extraheader %}
 
       {% endblock %}

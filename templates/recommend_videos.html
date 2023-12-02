@@ -1,28 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block title %}
+  <title>おすすめ動画</title>
+{% endblock %}
 
+{% block extraMetaInfo %}
+  <link rel="stylesheet" href="{% static '/css/reccomend_videos.css' %}" />
+{% endblock %}
 
-    <header>
-      <p>DreamDirector</p>
-      {% comment %} <a href="{% url 'top' %}" name="return_home">トップページ</a> {% endcomment %}
-      {% comment %} <a href="{% url 'post' %}">投稿</a> {% endcomment %}
-    </header>
-    <main>
-      <div class="your_recommendation">
-        {% for video in videos %}
-          {% if video.is_url_link %}
-            <div>
-              <form action="" method="POST">
-                <iframe width="560" height="315" src="{{ video.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </form>
-            </div>
-          {% else %}
-            <div>
-              <video controls preload="auto" playsinline src="{{ video.video.path }}"></video>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </main>
-  </body>
-</html>
+{% block main %}
+  <div class="your_recommendation">
+    {% for video in videos %}
+      {% if video.is_url_link %}
+        <div>
+          <form action="" method="POST">
+            <iframe width="560" height="315" src="{{ video.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </form>
+        </div>
+      {% else %}
+        <div>
+          <video controls preload="auto" playsinline src="{{ video.video.path }}"></video>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}
