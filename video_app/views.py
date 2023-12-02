@@ -9,7 +9,8 @@ def recommend_videosView(request):
     '''
     おすすめ動画を表示するページ用のビュー
     '''
-    return render(request, 'recommend_videos.html')
+    video_pathe = get_object_or_404()
+    return render(request, 'recommend_videos.html',context={'video_pathe':video_pathe})
 
 
 def other_videosView(request):
