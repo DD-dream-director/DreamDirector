@@ -7,23 +7,26 @@
 </head>
 <body>
     <header>
-        <p>未定</p>
-    </header>
-    <div class = "diagnosis-contents">
-        <form action="post">
-            {% csrf_token %}
-            <button type="submit" name = "diagnosis_button">診断する</button>
+        <p>DreamDirector</p>
+        <form method = "POST" action = "">
+            <button type = "submit" , name = "return_home">トップページ</button>
         </form>
+        <form method = "POST" action = "">
+            <button type = "submit" , name = "post_page">投稿</button>
+        </form>
+    </header>
+    <div class = "your_recommendation">
+    {% for display in contents %}
+    {% if content.contents_type == "youtube"}
+        <div>
+            <iframe width="560" height="315" src={{display.}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    {% elif content.content_type == "local_file"%}
+        <div>
+            <video controls preload = "auto" playsinline src = {{display.}}
     </div>
-    <div class = "result-contents">
-        {% for result in results %}
-        <article>
-            <p>目標:{{result.number}}</p>
-            <p>内容:{{result.content}}</p>
-            <form method = "POST" action = "{% url 'delete' %}">
-                <button type = "submit" >達成！</button>
-        </article>
-        {% endfor %}
+    <div class = "other_recommendation">
+        a
     </div>
 </body>
 </html>

@@ -1,0 +1,35 @@
+*{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+header {
+    background-color: lightyellow;
+    font-family: fantasy, sans-serif;
+}
+
+.diagosis-contents {
+    padding: 30px;
+    background-color: #beffd7;
+}
+
+.result-contents {
+    padding: 30px;
+    background-color: #ffcfcf;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffcfcf;
+    align-items: center;
+    border-radius: 3px;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 0 auto;
+    margin-top: 10px;
+}
