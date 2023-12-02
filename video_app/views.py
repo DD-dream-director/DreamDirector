@@ -5,14 +5,6 @@ from models import *
 
 # Create your views here.
 
-
-def diagnosisView(request):
-    '''
-    タグがいっぱいあるやつ
-    '''
-    pass
-
-
 def recommend_videosView(request):
     '''
     おすすめ動画を表示するページ用のビュー
@@ -28,7 +20,7 @@ def other_videosView(request):
     pass
 
 
-def other_videoView(request):
+def videoView(request):
     '''
     動画を一つ表示する用のビュー
     '''
