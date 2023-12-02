@@ -11,16 +11,6 @@ header {
     font-family: fantasy, sans-serif;
 }
 
-.diagosis-contents {
-    padding: 30px;
-    background-color: #beffd7;
-}
-
-.result-contents {
-    padding: 30px;
-    background-color: #ffcfcf;
-}
-
 button {
     padding: 10px 20px;
     border: none;

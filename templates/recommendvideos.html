@@ -3,7 +3,6 @@
 <head>
     <meta cherset="UTF-8">
     <link rel="stylesheet" herf="../static/top.css">
-    <title>Top_page</title>
 </head>
 <body>
     <header>
@@ -16,17 +15,18 @@
         </form>
     </header>
     <div class = "your_recommendation">
-    {% for display in contents %}
-    {% if content.contents_type == "youtube" %}
+    {% for content , path in contents , video_pathes %}
+    {% if content.contents_type == "youtube"}
         <div>
-            <iframe width="560" height="315" src={{display.}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <form action = ""  method = "POST">
+
+            <iframe width="560" height="315" src={{path}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     {% elif content.content_type == "local_file"%}
         <div>
-            <video controls preload = "auto" playsinline src = {{display.}}
-    </div>
-    <div class = "other_recommendation">
-        a
+            <video controls preload = "auto" playsinline src = {{path}}
+    {% endif %}
+    {% endfor %}
     </div>
 </body>
 </html>
