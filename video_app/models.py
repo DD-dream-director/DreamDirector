@@ -21,3 +21,4 @@ class VideoTagList(models.Model):
     content = models.ForeignKey(VideoContent, on_delete=models.CASCADE)
     # これはいらないかもしれない.
     tag = models.ForeignKey(VideoTagName, on_delete=models.CASCADE)
+
