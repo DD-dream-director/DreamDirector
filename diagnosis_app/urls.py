@@ -1,5 +1,5 @@
 from django.urls import path
-from video_app.views import *
+from diagnosis_app.views import diagnosisView
 
 urlpatterns = [
     path('diagnosis/', diagnosisView, name='diagnosis'),

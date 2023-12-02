@@ -4,10 +4,8 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 
-def diagnosis(request):
+def diagnosisView(request):
     '''
     診断用のビュー
     '''
-    return render('/')
-
-    pass
+    return render(request, 'diagnosis.html')

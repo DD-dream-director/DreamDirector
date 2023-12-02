@@ -14,9 +14,9 @@
             <button type = "submit" , name = "post_page">投稿</button>
         </form>
     </header>
-    <div class = "other_recommendation">
-    {% for content , path in contents , video_pathes  %}
-    {% if content.contents_type == "youtube"}
+    <div class = "your_recommendation">
+    {% for display in contents %}
+    {% if content.contents_type == "youtube" %}
         <div>
             <iframe width="560" height="315" src={{path}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
