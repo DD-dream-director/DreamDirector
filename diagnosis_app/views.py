@@ -1,16 +1,19 @@
 from django.shortcuts import render
 from django.db import models
 from .models import User_select, User
+from django.contrib.auth.decorators import login_required
 
 
 def diagnosisView(request):
     if request.method == 'POST':
-        user_name = request.post.get('uer_name')
-        video_tag = request.post.get('video_tag')
+        #form = フォームを記入
+        if form.is_valid():
+            selected_tag = form.save(commit=False)
+            selected_tag.user = request.user
+            selected_tag.save()
 
-        diagnosis = User_select(user_name=user_name, video_tag=video_tag)
-        diagnosis.save()
-
+    else:
+        #form =  フォームの名前
         return render(request, 'index')
     
     return render(request, 'index')
