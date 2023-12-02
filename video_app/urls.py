@@ -1,7 +1,7 @@
 # coding:utf-8
 
 from django.urls import path
-from views import *
+from video_app.views import *
 
 urlpatterns = [
     path('recommend_videos/',recommend_videosView,name="recommend_videos"), # おすすめ動画を表示するルーティング
