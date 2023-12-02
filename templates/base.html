@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+
+    {% endblock %}
+    {% block extrametaInfo %}
+
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      {% block extraheader %}
+
+      {% endblock %}
+    </header>
+    <main>
+      {% block main %}
+
+      {% endblock %}
+    </main>
+    <footer>
+      {% block extrafooter %}
+
+      {% endblock %}
+    </footer>
+  </body>
+</html>
