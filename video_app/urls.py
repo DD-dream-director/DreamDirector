@@ -9,4 +9,5 @@ urlpatterns = [
     path('other_videos/', other_videosView,
          name="other_videos"),  # おすすめ以外の動画を表示するルーティング
     path('video/<int:video_id>', videoView, name="video"),  # 動画を一つ表示するページ
+    path('post_video/', postView, name='post_video'),  # 動画を投稿するページ
 ]
