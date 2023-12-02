@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta cherset="UTF-8">
+    <link rel="stylesheet" herf="../static/top.css">
+</head>
+<body>
+    <header>
+        <p>DreamDirector</p>
+        <form method = "POST" action = "">
+            <button type = "submit" , name = "return_home">トップページ</button>
+        </form>
+        <form method = "POST" action = "">
+            <button type = "submit" , name = "post_page">投稿</button>
+        </form>
+    </header>
+    <div class = "your_recommendation">
+    {% for display in contents %}
+    {% if content.contents_type == "youtube" %}
+        <div>
+            <iframe width="560" height="315" src={{path}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    {% elif content.content_type == "local_file"%}
+        <div>
+            <video controls preload = "auto" playsinline src = {{path}}
+    {% endif %}
+    {% endfor  %}
+    </div>
+</body>
+</html>

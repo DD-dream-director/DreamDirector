@@ -1,11 +1,10 @@
 # coding:utf-8
 
 from django.urls import path
-from views import *
+from video_app.views import *
 
 urlpatterns = [
-    path('video_app/diagnosis.html'),
-    path('video_app/recomment_videos.html'),
-    path('video_app/other_videos.html'),
-    path('video_app/other_video.html'),
+    path('recommend_videos/',recommend_videosView,name="recommend_videos"), # おすすめ動画を表示するルーティング
+    path('other_videos/',other_videosView,name="other_videos"), # おすすめ以外の動画を表示するルーティング
+    path('video/',videoView,name="video"), # 動画を一つ表示するページ
 ]

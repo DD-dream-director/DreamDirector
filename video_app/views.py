@@ -1,27 +1,26 @@
 from django.shortcuts import render, redirect
-from .models import VideoTagName
-from django.contrib.auth.models import User
-from django.db import models
+from django.shortcuts import get_object_or_404
+from video_app.models import *
+
 
 # Create your views here.
 
-
-def diagnosisView(request):
-    video_tags = VideoTagName.objects.all()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    #for video_tag in video_tags:
-        
-
-
-
-
-def recomment_videosView(request):
-    pass
+def recommend_videosView(request):
+    '''
+    おすすめ動画を表示するページ用のビュー
+    '''
+    return render(request, 'recommend_videos.html')
 
 
 def other_videosView(request):
-    pass
+    '''
+    おすすめ以外の動画を表示する用のビュー
+    '''
+    return render(request, 'other_videos.html')
 
 
-def other_videos(request):
-    pass
+def videoView(request):
+    '''
+    動画を一つ表示する用のビュー
+    '''
+    return render(request, 'video.html')
