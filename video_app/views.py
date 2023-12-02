@@ -9,7 +9,7 @@ def recommend_videosView(request):
     '''
     おすすめ動画を表示するページ用のビュー
     '''
-    videos = get_object_or_404(VideoContent)
+    videos = get_object_or_404(Video)
     return render(request, 'recommend_videos.html', context={'videos': videos})
 
 

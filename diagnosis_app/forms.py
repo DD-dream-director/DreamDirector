@@ -1,7 +1,7 @@
 from django import forms
-from .models import SelectedItem # 紐づけを行うモデル
+from .models import User_select
 
-class SelectedItemForm(forms.ModelForm):
+class SelectedTagForm(forms.ModelForm):
     class Meta:
-        model = SelectedItem
-        fields = ['selected_item']
+        model = User_select
+        fields = ['name']

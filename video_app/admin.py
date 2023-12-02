@@ -4,4 +4,4 @@ from video_app.models import *
 # Register your models here.
 
 
-admin.site.register([VideoContent,VideoTag,VideoTagList])
+admin.site.register([Tag,Video])
