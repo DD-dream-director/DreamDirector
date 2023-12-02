@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'general_app',
     'account_app',
     'video_app',
+    'diagnosis_app',
 ]
 
 MIDDLEWARE = [
