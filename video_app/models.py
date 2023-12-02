@@ -4,12 +4,13 @@ from django.db import models
 
 
 class VideoContent(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    upload_date = models.DateTimeField()
-    original_name = models.CharField(max_length=200)
-    filename = models.CharField(max_length=200, default="")
-    thumb_frame = models.IntegerField(default=0)
+    title = models.CharField(max_length=200)  # タイトル
+    description = models.TextField()  # 説明
+    upload_date = models.DateTimeField()  # アップロード日
+    original_name = models.CharField(max_length=200)  # 管理ID
+    filename = models.CharField(max_length=200, default="")  # ファイル名
+    thumb_frame = models.IntegerField(default=0)  # いいねボタン
+    file_type = models.CharField(max_length=100)  # 'youtube' or 'local_file'
 
 
 class VideoTagName(models.Model):
