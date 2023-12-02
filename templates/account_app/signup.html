@@ -14,7 +14,13 @@
             <input type="password" name="password2" placeholder="パスワード確認用"><br>
             <br>
 
+
             {% if form.errors %}
+            {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                <li><strong>{{ field }}:</strong> {{ error }}</li>
+            {% endfor %}
+        {% endfor %}
                 <span class="mb-2 text-danger d-block text-start">利用できないユーザーIDやパスワードの可能性があります。入力内容を再度ご確認ください。</span>
             {% endif %}
             <button type="submit" class="btn btn-success m-2">アカウント作成</button>
