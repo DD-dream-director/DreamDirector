@@ -1,6 +1,9 @@
 from django.db import models
+from django.contrib.auth import get_user_model()
 
 # Create your models here.
+
+User = get_user_model()
 
 
 class VideoContent(models.Model):
@@ -24,11 +27,15 @@ class VideoContent(models.Model):
     )  # 'youtube' or 'local_file'
 
 
-class VideoTagName(models.Model):
+class VideoTag(models.Model):
+    '''
+    '''
     name = models.CharField(max_length=200, default="")
+    user = models.ForeignKey(User,on_delete=models.PROTECT)
+
 
 
 class VideoTagList(models.Model):
     content = models.ForeignKey(VideoContent, on_delete=models.CASCADE)
     # これはいらないかもしれない.
-    tag = models.ForeignKey(VideoTagName, on_delete=models.CASCADE)
+    tag = models.ForeignKey(VideoTag, on_delete=models.CASCADE)

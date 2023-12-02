@@ -17,7 +17,7 @@
     </header>
     <div class = "your_recommendation">
     {% for display in contents %}
-    {% if content.contents_type == "youtube"}
+    {% if content.contents_type == "youtube" %}
         <div>
             <iframe width="560" height="315" src={{display.}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
