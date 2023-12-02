@@ -1,20 +1,14 @@
-from django.shortcuts import render
-from django.db import models
-from .models import User_select, User
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth import get_user_model
+from video_app.models import Tag
+
+UserModel = get_user_model()
 
 
 def diagnosisView(request):
-    if request.method == 'POST':
-        user_name = request.post.get('user_name')
-        video_tag = request.post.get('video_tag')
+    '''
+    サインアップ直後の診断用
+    '''
+    tags = Tag.objects.all()
 
-        diagnosis = User_select(user_name=user_name, video_tag=video_tag)
-        diagnosis.save()
-
-        return render(request, 'diagnosis.html')
-    
-    return render(request, 'diagnosis.html')
-        
-
-
-        
+    return render(request, 'diagnosis.html', context={'tags': tags})
