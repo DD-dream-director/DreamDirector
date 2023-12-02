@@ -1,15 +1,23 @@
+<!-- 可読性と管理効率向上のため,以下のコメントとblockは消さないこと -->
 {% extends 'base.html' %}
 {% load static %}
 
 {% block title %}
+  <!-- titleタグを入れる -->
   <title>おすすめ動画</title>
 {% endblock %}
 
 {% block extraMetaInfo %}
-  <link rel="stylesheet" href="{% static '/css/reccomend_videos.css' %}" />
+  <!-- 追加のlinkタグなどを入れる -->
+  <link rel="stylesheet" href="{% static '/css/recomend_videos.css' %}" />
+{% endblock %}
+
+{% block extraheader %}
+  <!-- headerタグ内の追加要素を入れる -->
 {% endblock %}
 
 {% block main %}
+  <!-- mainタグの追加の要素を入れる -->
   <div class="your_recommendation">
     {% for video in videos %}
       {% if video.is_url_link %}
@@ -25,4 +33,12 @@
       {% endif %}
     {% endfor %}
   </div>
+{% endblock %}
+
+{% block extrafooter %}
+  <!-- footerタグ内の追加要素を入れる -->
+{% endblock %}
+
+{% block extraScript %}
+  <!-- 追加のjavascript読み込み用のscriptタグを入れる -->
 {% endblock %}
