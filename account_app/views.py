@@ -10,8 +10,8 @@ class SignupView(CreateView):
     model = User
     form_class = SignupForm
     template_name = 'account_app/signup.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('diagnosis')
 
 def logout_view(request):
     logout(request)
-    return redirect('index')
+    return redirect('recommend_videos')
