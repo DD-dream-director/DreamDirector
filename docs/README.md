@@ -3,7 +3,7 @@
 # フォルダに関する簡単な説明文
 - config : settings.pyとかが入っているフォルダ
 - account_app : アカウント管理機能
-- diagnosis_app : まだ未定だけど、openaiをdjangoに組み込むときに使うフォルダ
+- diagnosis_app : 会員登録後のアカウントの診断に使うアプリを入れる
 - general_app : トップページとか、こまごました機能を入れる
 - templates : htmlファイルの格納場所
 
