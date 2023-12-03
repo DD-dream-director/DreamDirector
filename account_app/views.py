@@ -13,7 +13,6 @@ class SignupView(CreateView):
     template_name = 'account_app/signup.html'
     success_url = reverse_lazy('recommend_videos')
 
-
 def logout_view(request):
     logout(request)
-    return redirect('index')
+    return redirect('recommend_videos')
