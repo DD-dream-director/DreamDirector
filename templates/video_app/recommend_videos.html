@@ -36,6 +36,7 @@
           <button type ="submit" name="video">動画を表示</button>
           </form>
         </div>
+        <a href="{% url 'video' video.id %}">その動画へ</a>
       {% endif %}
     {% endfor %}
   </div>
