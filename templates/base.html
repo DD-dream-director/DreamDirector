@@ -18,8 +18,8 @@
       <!-- トップページなどが使えるようになったらコメントを外すこと -->
       <a href="{% url 'recommend_videos' %}" name="return_home">トップページ</a>
       <a href="{% url 'post_video' %}">投稿</a>
-      <a href="{% url 'login' %}">ログイン</a>
-      <a href="{% url 'logout' %}">ログアウト</a>
+      <a href="{% url 'account_app:login' %}">ログイン</a>
+      <a href="{% url 'account_app:logout' %}">ログアウト</a>
       {% block extraheader %}
 
       {% endblock %}
