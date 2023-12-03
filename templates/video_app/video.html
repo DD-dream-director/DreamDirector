@@ -18,11 +18,11 @@
   <!-- mainタグの追加の要素を入れる -->
   <h2>{{ video.title }}</h2>
   <video width="640" height="360" controls>
-  <video src="{{ videos.video.path }}" controls></video>
+  {% comment %} <video src="{{ videos.video.path }}" controls></video> {% endcomment %}
     <ol>
-      {% for tag in video.tags %}
-        <li>{{ tag }}</li>
-      {% endfor %}
+      {% comment %} {% for tag in video.tags %} {% endcomment %}
+        {% comment %} <li>{{ tag }}</li> {% endcomment %}
+      {% comment %} {% endfor %} {% endcomment %}
     </ol>
   </video>
 
