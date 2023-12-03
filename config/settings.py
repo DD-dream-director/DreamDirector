@@ -126,14 +126,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Media directory
-MEDIA_ROOT = '/storage/'
-MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/video_app/recommend_videos'
 LOGOUT_REDIRECT_URL = '/video_app/recommend_videos'
 
+# Media directory
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# 画像
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [

@@ -1,6 +1,9 @@
 # coding:utf-8
 from video_app.models import *
 from django.contrib.auth import get_user_model
+from django.shortcuts import get_object_or_404
+from video_app.models import *
+
 
 UserModel = get_user_model()
 
@@ -11,7 +14,7 @@ def select(user_id: int):
     Args:
         user_id (int): auth_userテーブルのidカラム(<- プライマリーキー)
     """
-    pass
+    # recommend_videos = Video.objects.filter(tags=)
 
 
 if __name__ == "__main__":

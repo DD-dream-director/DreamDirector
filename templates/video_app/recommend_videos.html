@@ -28,7 +28,7 @@
         </div>
       {% else %}
         <div>
-          <video controls preload="auto" playsinline src="{{ video.video.path }}"></video>
+          <video controls preload="auto" playsinline src="/static/media/{{ video.filename }}"></video>
         </div>
       {% endif %}
     {% endfor %}
