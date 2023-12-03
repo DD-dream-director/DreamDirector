@@ -1,0 +1,13 @@
+*{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+header {
+    background-color: lightyellow;
+    font-family: fantasy, sans-serif;
+    padding:  10px;
+}
