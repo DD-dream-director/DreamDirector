@@ -6,11 +6,12 @@ from django.views.generic import CreateView
 
 from .forms import SignupForm
 
+
 class SignupView(CreateView):
     model = User
     form_class = SignupForm
     template_name = 'account_app/signup.html'
-    success_url = reverse_lazy('diagnosis')
+    success_url = reverse_lazy('recommend_videos')
 
 def logout_view(request):
     logout(request)
