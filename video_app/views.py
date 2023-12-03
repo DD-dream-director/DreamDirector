@@ -12,19 +12,14 @@ def recommend_videosView(request):
 
     # おすすめ動画を選定するアルゴリズム
     # user = request.user # ログインしているユーザー
-    # recommend_videos = UserModel.objects.get(tags=)
 
     videos = Video.objects.all()
     return render(request, 'video_app/recommend_videos.html', context={'videos': videos})
-
 
 def other_videosView(request):
     '''
     おすすめ以外の動画を表示する用のビュー
     '''
-
-    
-
 
     videos = get_object_or_404(Video)
     return render(request, 'video_app/other_videos.html', context={'videos': videos})
