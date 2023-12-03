@@ -4,15 +4,8 @@
 
 {% block title %}
   <!-- titleタグを入れる -->
-  <div class = container>
-   <form  action="" method="POST">{% csrf_token %}
-    <table>
-     {{  }}
-    </table>
-   <input type="submit" value="投稿">
-  </form>
-</div>
 {% endblock %}
+
 
 {% block extraMetaInfo %}
   <!-- 追加のlinkタグなどを入れる -->
@@ -25,6 +18,14 @@
 
 {% block main %}
   <!-- mainタグの追加の要素を入れる -->
+  <div class = container>
+    <form  action="" method="POST">{% csrf_token %}
+     <table>
+      {{  }}
+     </table>
+    <input type="submit" value="投稿">
+   </form>
+   </div>
 {% endblock %}
 
 {% block extrafooter %}
