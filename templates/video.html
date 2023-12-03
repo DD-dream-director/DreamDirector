@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta cherset="UTF-8">
-    <link rel="stylesheet" herf="../static/top.css">
-</head>
-<body>
-    <h2>{{ name }}</h2>
+
+
+
+    <h2>{{ video.title }}</h2>
     <video width="640" height="360" controls>
-        <video src="" controls></video>
+        <video src="{{  }}" controls></video>
         <ol>
-            <li>{% for tag in tags %}</li>
+        {% for tag in video.tags %}
+            <li>{{ tag }}</li>
+        {% endfor %}
         </ol>
     </video>
-</body>
-</html>
+

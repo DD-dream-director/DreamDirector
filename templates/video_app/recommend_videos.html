@@ -31,6 +31,7 @@
         <div>
           <video controls preload="auto" playsinline src="{% static '{{ videos.video.path }}' %}"></video>
         </div>
+        <a href="{% url 'video' video.id %}">その動画へ</a>
       {% endif %}
     {% endfor %}
   </div>

@@ -28,10 +28,8 @@ def videoView(request, video_id: int):
     '''
 
     video = get_object_or_404(Video, pk=video_id)
-    name = Video.title
-    tags = Video.tags
     comments = Comment.objects.filter(commented_to=video)
-    return render(request, 'video_app/video.html', context={'video': video, 'name': name, 'tags': tags, 'comments': comments})
+    return render(request, 'video_app/video.html', context={'video': video, 'comments': comments})
 
 
     
