@@ -21,8 +21,11 @@ def other_videosView(request):
     return render(request, 'other_videos.html',context={'videos':videos})
 
 
-def videoView(request):
+def videoView(request, original_name):
     '''
-    動画を一つ表示する用のビュー
+    動画を一つ表示する用のビュー(松山)
     '''
-    return render(request, 'video.html')
+    video = get_object_or_404(Video, pk=original_name)
+    name = Video.title
+    tags = Video.tags
+    return render(request, 'video.html', {'video': video, 'name': name, 'tags': tags})

@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>サイトタイトル</title>
-    </head>
-    <body>
-        <header>サインアップ</header>
-        <h1>サインアップ</h1>
-        <form method="post" class="p-4 m-4 bg-light border border-success rounded form-group">
-            {% csrf_token %}
-            
-
-
-            {% if form.errors %}
-            {% for field, errors in form.errors.items %}
-            {% for error in errors %}
-                <li><strong>{{ field }}:</strong> {{ error }}</li>
-            {% endfor %}
-        {% endfor %}
-                <span class="mb-2 text-danger d-block text-start">利用できないユーザーIDやパスワードの可能性があります。入力内容を再度ご確認ください。</span>
-            {% endif %}
-            <button type="submit" class="btn btn-success m-2">アカウント作成</button>
-        </form>
-    </body>
+<html>
+  <head>
+    <meta cherset="UTF-8" />
+    <link rel="stylesheet" herf="../static/top.css" />
+  </head>
+  <body>
+    <legend>興味のある分野を3つ選択</legend>
+    <!--   20個の中から3個までを選択する、name指定以外でバックに
+    もっていかなければならない   -->
+    {% for tag in tags %}
+      <input type="checkbox" name="tag{{ tag.pk }}" class="tag" />{{ tag.name }}
+    {% endfor %}
+    <script>
+      const checkMax = 3
+      const checkBoxes = document.getElementsByClassName('tag') // nameで取得するのではなく、class名で要素を取得するようにした.
+      
+      function checkCount(target) {
+        let checkCount = 0
+        checkBoxes.forEach((checkBox) => {
+          if (checkBoxes.checked) {
+            checkCount++
+          }
+        })
+      
+        if (checkCount > checkMax) {
+          alert('最大3つまで')
+          target.checked = false
+        }
+      }
+      
+      checkBoxes.forEach((checkBox) => {
+        checkBox.addEventListener('change', () => {
+          checkCount(checkBox)
+        })
+      })
+    </script>
+  </body>
 </html>
