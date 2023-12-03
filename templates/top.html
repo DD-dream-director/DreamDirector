@@ -1,0 +1,32 @@
+<!-- 可読性と管理効率向上のため,以下のコメントとblockは消さないこと -->
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %}
+  <!-- titleタグを入れる -->
+{% endblock %}
+
+{% block extraMetaInfo %}
+  <!-- 追加のlinkタグなどを入れる -->
+{% endblock %}
+
+{% block extraheader %}
+  <!-- headerタグ内の追加要素を入れる -->
+{% endblock %}
+
+{% block main %}
+  <!-- mainタグの追加の要素を入れる -->
+  <h1>ようこそ!DDへ！</h1>
+  <p>
+    <a href="{% url 'top' %}" class="btn btn-primary">DDをはじめる</a>
+  </p>
+{% endblock %}
+
+{% block extrafooter %}
+  <!-- footerタグ内の追加要素を入れる -->
+{% endblock %}
+
+{% block extraScript %}
+  <!-- 追加のjavascript読み込み用のscriptタグを入れる -->
+{% endblock %}
