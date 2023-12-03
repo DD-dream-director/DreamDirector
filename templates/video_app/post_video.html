@@ -4,16 +4,19 @@
 
 {% block title %}
   <!-- titleタグを入れる -->
-  <form  action="" method="POST">{% csrf_token %}
-  <table>
-    {{  }}
-  </table>
-  <input type="submit" value="投稿">
-</form>
+  <div class = container>
+   <form  action="" method="POST">{% csrf_token %}
+    <table>
+     {{  }}
+    </table>
+   <input type="submit" value="投稿">
+  </form>
+</div>
 {% endblock %}
 
 {% block extraMetaInfo %}
   <!-- 追加のlinkタグなどを入れる -->
+  <link rel="stylesheet" href="{% static '/css/post.css' %}" />
 {% endblock %}
 
 {% block extraheader %}
