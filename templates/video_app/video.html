@@ -16,6 +16,16 @@
 
 {% block main %}
   <!-- mainタグの追加の要素を入れる -->
+  <h2>{{ video.title }}</h2>
+  <video width="640" height="360" controls>
+  <video src="{{ videos.video.path }}" controls></video>
+    <ol>
+      {% for tag in video.tags %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+    </ol>
+  </video>
+
 {% endblock %}
 
 {% block extrafooter %}
