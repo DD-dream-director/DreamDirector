@@ -1,7 +1,8 @@
 from django import forms
-from .models import User_select
+from account_app.models import Profile
+
 
 class SelectedTagForm(forms.ModelForm):
     class Meta:
-        model = User_select
-        fields = ['name']
+        model = Profile
+        fields = ['tags']

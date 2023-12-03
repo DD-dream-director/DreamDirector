@@ -6,8 +6,10 @@
   <!-- titleタグを入れる -->
 {% endblock %}
 
+
 {% block extraMetaInfo %}
   <!-- 追加のlinkタグなどを入れる -->
+  <link rel="stylesheet" href="{% static '/css/post.css' %}" />
 {% endblock %}
 
 {% block extraheader %}
@@ -16,6 +18,14 @@
 
 {% block main %}
   <!-- mainタグの追加の要素を入れる -->
+  <div class = container>
+    <form  action="" method="POST">{% csrf_token %}
+     <table>
+      {{  }}
+     </table>
+    <input type="submit" value="投稿">
+   </form>
+   </div>
 {% endblock %}
 
 {% block extrafooter %}

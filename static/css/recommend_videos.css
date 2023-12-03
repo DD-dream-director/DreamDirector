@@ -1,0 +1,28 @@
+*{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+header {
+    background-color: lightyellow;
+    font-family: fantasy, sans-serif;
+    padding:  10px;
+}
+
+your_recommendation {
+    background-color: #a6fcff;     
+    padding:  10px;
+    color: rgb(45, 24, 141);  
+    margin:  10px;     
+    border-radius:  5px;
+    text-align: center;
+    width: 500px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #ffebfd;
+    margin: 0 auto;
+}
