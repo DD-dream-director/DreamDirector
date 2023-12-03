@@ -1,13 +1,14 @@
+<!-- Test -->
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta cherset="UTF-8" />
-    <link rel="stylesheet" herf="../static/top.css" />
   </head>
   <body>
     <legend>興味のある分野を3つ選択</legend>
-    <!--   20個の中から3個までを選択する、name指定以外でバックに
-    もっていかなければならない   -->
+    <!--    20個の中から3個までを選択する、name指定以外でバックに
+    もっていかなければならない    -->
     {% for tag in tags %}
       <input type="checkbox" name="tag{{ tag.pk }}" class="tag" />{{ tag.name }}
     {% endfor %}
