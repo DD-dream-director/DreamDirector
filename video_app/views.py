@@ -3,7 +3,6 @@ from django.shortcuts import get_object_or_404
 from video_app.models import *
 
 
-# Create your views here.
 
 def recommend_videosView(request):
     '''
