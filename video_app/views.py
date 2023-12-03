@@ -24,6 +24,7 @@ def other_videosView(request):
 def videoView(request, video_id: int):
     '''
     動画を一つ表示し、コメントとタグを選択する用のビュー
+    ここはmatuからコミットがあるはず
     '''
     video = Video.objects.get(pk=video_id)
     comments = Comment.objects.filter(commented_to=video)
