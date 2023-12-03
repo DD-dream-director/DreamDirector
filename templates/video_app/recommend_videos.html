@@ -24,11 +24,17 @@
         <div>
           <form action="" method="POST">
             <iframe width="560" height="315" src="{{ video.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <form action="" mathod="POST">
+            <button type ="submit" name="video">動画を表示</button>
+            </form>
           </form>
         </div>
       {% else %}
         <div>
           <video controls preload="auto" playsinline src="{{ video.video.path }}"></video>
+          <form action="" method="POST">
+          <button type ="submit" name="video">動画を表示</button>
+          </form>
         </div>
       {% endif %}
     {% endfor %}

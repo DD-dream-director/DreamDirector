@@ -9,17 +9,20 @@
 header {
     background-color: lightyellow;
     font-family: fantasy, sans-serif;
+    padding:  10px;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #ffcfcf;
-    align-items: center;
-    border-radius: 3px;
-    color: #000000;
-    cursor: pointer;
-    transition: background-color 0.2s;
+your_recommendation {
+    background-color: #a6fcff;     
+    padding:  10px;
+    color: rgb(45, 24, 141);  
+    margin:  10px;     
+    border-radius:  5px;
+    text-align: center;
+    width: 500px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #ffebfd;
     margin: 0 auto;
-    margin-top: 10px;
 }
