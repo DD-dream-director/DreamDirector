@@ -9,7 +9,7 @@
 
 {% block extraMetaInfo %}
   <!-- 追加のlinkタグなどを入れる -->
-  <link rel="stylesheet" href="{% static '/css/recomend_videos.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/recommend_videos.css' %}" />
 {% endblock %}
 
 {% block extraheader %}
@@ -24,12 +24,17 @@
         <div>
           <form action="" method="POST">
             <iframe width="560" height="315" src="{{ video.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-bQUP7jfUGg?si=P_x-7qC2y477XFvz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <form action="" mathod="POST">
+            <button type ="submit" name="video">動画を表示</button>
+            </form>
           </form>
         </div>
       {% else %}
         <div>
           <video controls preload="auto" playsinline src="{% static '{{ videos.video.path }}' %}"></video>
+          <form action="" method="POST">
+          <button type ="submit" name="video">動画を表示</button>
+          </form>
         </div>
       {% endif %}
     {% endfor %}
