@@ -127,8 +127,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Media directory
-MEDIA_ROOT = '/storage/'
-MEDIA_URL = '/media/'
+#MEDIA_ROOT = '/storage/'
+#MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
