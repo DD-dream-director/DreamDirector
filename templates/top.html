@@ -1,6 +1,7 @@
 <!-- 可読性と管理効率向上のため,以下のコメントとblockは消さないこと -->
 {% extends 'base.html' %}
 {% load static %}
+{% load django_bootstrap5 %}
 
 {% block title %}
   <!-- titleタグを入れる -->
@@ -16,16 +17,10 @@
 
 {% block main %}
   <!-- mainタグの追加の要素を入れる -->
-  <h2>{{ video.title }}</h2>
-  <video width="640" height="360" controls src="/static/media/{{ video.filename }}">
-  {% comment %} <video src="/static/media/{{ video.filename }}" controls></video> {% endcomment %}
-    {% comment %} <ol> {% endcomment %}
-      {% comment %} {% for tag in video.tags %} {% endcomment %}
-        {% comment %} <li>{{ tag }}</li> {% endcomment %}
-      {% comment %} {% endfor %} {% endcomment %}
-    {% comment %} </ol> {% endcomment %}
-  {% comment %} </video> {% endcomment %}
-
+  <h1>ようこそ!DDへ！</h1>
+  <p>
+    <a href="{% url 'top' %}" class="btn btn-primary">DDをはじめる</a>
+  </p>
 {% endblock %}
 
 {% block extrafooter %}

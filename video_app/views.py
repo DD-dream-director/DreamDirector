@@ -41,3 +41,7 @@ def postView(request):
     動画投稿用のビュー
     '''
     return render(request, 'video_app/post_video.html')
+
+
+def topView(request):
+    return render(request,'top.html')
