@@ -24,17 +24,21 @@
         <div>
           <form action="" method="POST">
             <iframe width="560" height="315" src="{{ video.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            {% comment %} <form action="" mathod="POST"> {% endcomment %}
-            {% comment %} <button type ="submit" name="video">動画を表示</button> {% endcomment %}
-            {% comment %} </form> {% endcomment %}
+            {% comment %} <form action="" mathod="POST">
+              {% endcomment %}
+              {% comment %} <button type="submit" name="video">動画を表示</button> {% endcomment %}
+              {% comment %}
+            </form> {% endcomment %}
           </form>
         </div>
       {% else %}
         <div>
-          <video controls preload="auto" playsinline src="{% static '{{ videos.video.path }}' %}"></video>
-          {% comment %} <form action="" method="POST"> {% endcomment %}
-          {% comment %} <button type ="submit" name="video">動画を表示</button> {% endcomment %}
-          {% comment %} </form> {% endcomment %}
+          <video width="400" height="300" controls preload="auto" playsinline src="/static/media/{{ video.filename }}"></video>
+          {% comment %} <form action="" method="POST">
+            {% endcomment %}
+            {% comment %} <button type="submit" name="video">動画を表示</button> {% endcomment %}
+            {% comment %}
+          </form> {% endcomment %}
         </div>
         <a href="{% url 'video' video.id %}">その動画へ</a>
       {% endif %}

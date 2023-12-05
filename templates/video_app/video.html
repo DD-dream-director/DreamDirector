@@ -17,14 +17,14 @@
 {% block main %}
   <!-- mainタグの追加の要素を入れる -->
   <h2>{{ video.title }}</h2>
-  <video width="640" height="360" controls>
-  {% comment %} <video src="{{ videos.video.path }}" controls></video> {% endcomment %}
-    <ol>
+  <video width="640" height="360" controls src="/static/media/{{ video.filename }}">
+  {% comment %} <video src="/static/media/{{ video.filename }}" controls></video> {% endcomment %}
+    {% comment %} <ol> {% endcomment %}
       {% comment %} {% for tag in video.tags %} {% endcomment %}
         {% comment %} <li>{{ tag }}</li> {% endcomment %}
       {% comment %} {% endfor %} {% endcomment %}
-    </ol>
-  </video>
+    {% comment %} </ol> {% endcomment %}
+  {% comment %} </video> {% endcomment %}
 
 {% endblock %}
 
