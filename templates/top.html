@@ -1,15 +1,14 @@
 <!-- 可読性と管理効率向上のため,以下のコメントとblockは消さないこと -->
 {% extends 'base.html' %}
 {% load static %}
+{% load django_bootstrap5 %}
 
 {% block title %}
   <!-- titleタグを入れる -->
 {% endblock %}
 
-
 {% block extraMetaInfo %}
   <!-- 追加のlinkタグなどを入れる -->
-  <link rel="stylesheet" href="{% static '/css/post.css' %}" />
 {% endblock %}
 
 {% block extraheader %}
@@ -18,14 +17,10 @@
 
 {% block main %}
   <!-- mainタグの追加の要素を入れる -->
-  <div class = container>
-    <form  action="" method="POST">{% csrf_token %}
-     <table>
-      {{  }}
-     </table>
-    <input type="submit" value="投稿">
-   </form>
-   </div>
+  <h1>ようこそ!DDへ！</h1>
+  <p>
+    <a href="{% url 'top' %}" class="btn btn-primary">DDをはじめる</a>
+  </p>
 {% endblock %}
 
 {% block extrafooter %}

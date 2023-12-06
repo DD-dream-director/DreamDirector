@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'account_app',
     'diagnosis_app',
     'video_app',
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,12 @@ LOGIN_REDIRECT_URL = '/video_app/recommend_videos'
 LOGOUT_REDIRECT_URL = '/video_app/recommend_videos'
 
 # Media directory
+#MEDIA_ROOT = '/storage/'
+#MEDIA_URL = '/media/'
+
+LOGIN_REDIRECT_URL = 'recommend_videos'
+LOGOUT_REDIRECT_URL = 'recommend_videos'
+
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # 画像
