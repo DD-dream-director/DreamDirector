@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'diagnosis_app',
     'video_app',
     'django_bootstrap5',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
